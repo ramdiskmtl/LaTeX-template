@@ -1,0 +1,59 @@
+% --------文档类型设置--------
+
+% 常见可选参数：
+% 字号大小：10pt, 11pt, 12pt
+% 纸张大小：a4paper, letterpaper, a5paper, b5paper, legalpaper, executivepaper
+% 单栏/双栏：onecolumn, twocolumn
+
+\documentclass[a4paper,12pt]{article}
+
+% --------文档类型设置--------
+
+
+% -------导言区设置--------
+
+\input{packages.tex}
+
+\input{introductory.tex}
+
+
+% --------导言区设置--------
+
+
+% --------标题、作者、日期设置--------
+
+\title{\textbf{\LaTeX template for usual documents}}
+
+\author{Meng Zhiran}
+
+\date{\today}
+
+% --------标题、作者、日期设置--------
+
+% --------正文内容--------
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+
+\section{Section 1}
+\lipsum[1] % This generates some random text
+
+\subsection{Subsection 1.1}
+\lipsum[2-3] % This generates some more random text
+
+\subsubsection{Subsubsection 1.1.1}
+\lipsum[4-5] % This generates even more random text
+
+\section{Section 2}
+\lipsum[6] % This generates some random text
+
+\subsection{Subsection 2.1}
+\lipsum[7-8] % This generates some more random text
+
+\subsubsection{Subsubsection 2.1.1}
+\lipsum[9-10] % This generates even more random text
+
+\end{document}

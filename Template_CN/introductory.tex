@@ -1,0 +1,105 @@
+% -------------------------------------------------------
+
+%   LaTeX日常文件模板 by Meng Zhiran
+
+%   introductory.tex ： 导言区设置文件，设置编号规则、引用上标、页眉页脚、超链接等
+
+% -------------------------------------------------------
+
+% 目录设置为居中
+\renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+
+% 章节格式设置
+\ctexset{
+  section={format={\songti\zihao{3}\bfseries}},
+	subsection={format={\songti\zihao{4}\bfseries},beforeskip=0pt,afterskip=0pt},
+	subsubsection={format={\songti\zihao{-4}},beforeskip=0pt,afterskip=0pt}
+}
+
+\captionsetup{labelsep=quad}% 设置图表标题与编号之间的距离
+
+\counterwithin{figure}{section} % 让图编号分章节编号
+\counterwithin{table}{section}  % 让表编号分章节编号
+\numberwithin{equation}{section}% 让公式编号分章节编号
+
+\renewcommand{\baselinestretch}{1.5} %行间距
+
+\makeatletter
+\newcommand\dlmu[2][5cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt} % 使用自定义的\dlmu命令创造指定长度的下划线，默认5cm
+\makeatother
+
+
+%设置数字、英文字体
+\setmainfont{Times New Roman}
+
+%设置目录字体和格式
+\renewcommand{\cftsecfont}{\songti\bfseries}
+\renewcommand{\cftsubsecfont}{\songti}
+\renewcommand{\contentsname}{目\quad 录}
+
+%设置参考文献格式
+\renewcommand{\refname}{\heiti 参\ 考\ 文\ 献}
+
+%设置\Emph命令为加粗红色
+\newcommand{\Emph}[1]{\textbf{\color{red}#1}} 
+%设置\emph命令为加下划线
+\renewcommand{\emph}[1]{\underline{#1}} 
+
+\hypersetup{hidelinks} %使超链接文本与周围文本无视觉差异
+
+% \setlength{\abovecaptionskip}{0pt} %调整标题与图距离
+
+% 页眉页脚设置
+\pagestyle{fancy}
+
+\fancyhf{}
+\fancyhead[L]
+	{
+		\hspace{0cm}
+		\begin{minipage}[b]{0.05\linewidth}
+			\includegraphics[height=8mm]{Graph/sjtu_sign_cn.png}
+		\end{minipage}
+	}
+
+\fancyhead[R]{\small{测试页眉1}}
+\fancyfoot[C]{\thepage}
+
+% 设置代码高亮颜色
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Python的代码风格设置
+\lstdefinestyle{Python}{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  numbersep=10pt,
+  tabsize=3,
+  frame=single
+}
+
+% R的代码风格设置
+\lstdefinestyle{R}{
+  language=R,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{red},
+  commentstyle=\color{olive},
+  stringstyle=\color{purple},
+  breaklines=true,
+  breakatwhitespace=true,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  numbersep=10pt,
+  tabsize=3,
+  frame=single
+}
+
+% 将Reference居中
+\def\bibsection{\centering\section*{\refname}}

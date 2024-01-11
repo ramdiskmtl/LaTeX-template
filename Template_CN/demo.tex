@@ -1,0 +1,361 @@
+% -------------------------------------------------------
+
+%   LaTeX日常文件模板 by Meng Zhiran
+
+%   demo.tex ： 与普通的main.tex一致，可以在编译自己的文档时旁边开一个demo，方便copy代码
+
+% -------------------------------------------------------
+
+\documentclass[AutoFakeBold,a4paper]{ctexart}
+
+\input{packages.tex}
+
+\input{introductory.tex}
+
+\title{\textbf{中文模版Demo}}
+
+\author{孟之然}
+
+\date{\today}
+
+\begin{document}
+
+\tableofcontents
+
+\thispagestyle{empty}
+
+\newpage
+
+\setcounter{page}{1}
+
+\maketitle
+
+\thispagestyle{fancy}
+
+
+\section{文字}
+
+当提到文档排版与编辑\cite{bhagat2017,bittencourt2022,brennan2017,doblhofer2015}，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+LaTeX的模板系统和丰富的宏包使得用户能够专注于内容创作，而无需过多担心格式。通过使用LaTeX，用户可以更加灵活地控制文档的结构、样式和布局，确保最终输出符合个人或机构的规范要求。
+
+另一个LaTeX的优势是其强大的交叉引用和自动编号功能。使用LaTeX，用户可以轻松引用文档中的图表、公式和章节，而不必手动管理编号。这不仅提高了文档的可维护性，还确保了文档的一致性和准确性。
+
+
+
+\begin{itemize}
+    \item 今天的天气真好
+    \item \emph{今天的天气真好}
+    \item \textbf{今天的天气真好}
+    \item \Emph{今天的天气真好}
+\end{itemize}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+% enumerate可选参数：[1]表示编号从1开始，[a]表示小写字母编号，[A]表示大写字母编号，[i]表示小写罗马数字编号，[I]表示大写罗马数字编号
+
+\begin{enumerate}
+    \item 今天的天气真好
+    \item \emph{今天的天气真好}
+    \item \textbf{今天的天气真好}
+    \item \Emph{今天的天气真好}
+\end{enumerate}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{description}
+    \item[定义1] 今天的天气真好
+    \item[\emph{定义2}] \emph{今天的天气真好}
+\end{description}
+
+
+\section{图片}
+
+\subsection{单张图片}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Graph/test}
+    \caption{这是图片的图注}
+    \label{fig1}
+\end{figure}
+
+
+\subsection{含子图的图片}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[Subfigure 1]{\includegraphics[width=0.35\textwidth]{Graph/test1}\label{fig:sub1}}
+    \hspace{0.05\textwidth} % Adjust this value to control the gap
+    \subfloat[Subfigure 2]{\includegraphics[width=0.35\textwidth]{Graph/test1}\label{fig:sub2}}
+    \\
+    \subfloat[Subfigure 3]{\includegraphics[width=0.35\textwidth]{Graph/test1}\label{fig:sub3}}
+    \hspace{0.05\textwidth} % Adjust this value to control the gap
+    \subfloat[Subfigure 4]{\includegraphics[width=0.35\textwidth]{Graph/test1}\label{fig:sub4}}
+    \caption{这是图片的图注}
+    \label{fig:whole2}
+\end{figure}
+
+\subsection{复杂图片}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[Subfigure 1]{\includegraphics[width=0.35\textwidth]{Graph/test1}\label{fig:subsub1}}
+    \hspace{0.05\textwidth} % Adjust this value to control the gap
+    \subfloat[Subfigure 2]{\includegraphics[width=0.35\textwidth]{Graph/test1}\label{fig:subsub2}}
+    \\
+    \subfloat[Subfigure 3]{\includegraphics[width=0.35\textwidth]{Graph/test3}\label{fig:subsub3}}
+    \hspace{0.05\textwidth} % Adjust this value to control the gap
+    \subfloat[Subfigure 4]{\includegraphics[width=0.35\textwidth]{Graph/test3}\label{fig:subsub4}}
+    \\
+    \subfloat[Subfigure 5]{\includegraphics[width=0.75\textwidth]{Graph/test2}\label{fig:subsub5}}
+    \caption{这是图片的图注}
+    \label{fig:whole3}
+\end{figure}
+
+
+\section{表格}
+
+\subsection{小型三线表}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{table}[htbp]
+    \centering
+    \caption{这是表格的表注}
+    \begin{tabular}{ccc}
+        \toprule
+        Header 1 & Header 2 & Header 3 \\
+        \midrule
+        Cell 1 & Cell 2 & Cell 3 \\
+        Cell 4 & Cell 5 & Cell 6 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:mytable}
+\end{table}
+
+\subsection{大型横版三线表}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{sidewaystable}
+    \centering
+    \caption{这是表格的表注}
+    \begin{tabular}{cccccccccc}
+        \toprule
+        Header 1 & Header 2 & Header 3 & Header 4 & Header 5 & Header 6 & Header 7 & Header 8 & Header 9 & Header 10 \\
+        \midrule
+        Cell 1 & Cell 2 & Cell 3 & Cell 4 & Cell 5 & Cell 6 & Cell 7 & Cell 8 & Cell 9 & Cell 10 \\ [5ex]
+        Cell 11 & Cell 12 & Cell 13 & Cell 14 & Cell 15 & Cell 16 & Cell 17 & Cell 18 & Cell 19 & Cell 20 \\ [5ex]
+        Cell 21 & Cell 22 & Cell 23 & Cell 24 & Cell 25 & Cell 26 & Cell 27 & Cell 28 & Cell 29 & Cell 30 \\ [5ex]
+        Cell 31 & Cell 32 & Cell 33 & Cell 34 & Cell 35 & Cell 36 & Cell 37 & Cell 38 & Cell 39 & Cell 40 \\ [5ex]
+        Cell 41 & Cell 42 & Cell 43 & Cell 44 & Cell 45 & Cell 46 & Cell 47 & Cell 48 & Cell 49 & Cell 50 \\ [5ex]
+        Cell 51 & Cell 52 & Cell 53 & Cell 54 & Cell 55 & Cell 56 & Cell 57 & Cell 58 & Cell 59 & Cell 60 \\ [5ex]
+        Cell 61 & Cell 62 & Cell 63 & Cell 64 & Cell 65 & Cell 66 & Cell 67 & Cell 68 & Cell 69 & Cell 70 \\ [5ex]
+        Cell 71 & Cell 72 & Cell 73 & Cell 74 & Cell 75 & Cell 76 & Cell 77 & Cell 78 & Cell 79 & Cell 80 \\ [5ex]
+        Cell 81 & Cell 82 & Cell 83 & Cell 84 & Cell 85 & Cell 86 & Cell 87 & Cell 88 & Cell 89 & Cell 90 \\ [5ex]
+        Cell 91 & Cell 92 & Cell 93 & Cell 94 & Cell 95 & Cell 96 & Cell 97 & Cell 98 & Cell 99 & Cell 100 \\
+
+        \bottomrule
+    \end{tabular}
+    \label{tab:myLargeTable}
+\end{sidewaystable}
+
+
+\section{公式}
+
+\subsection{段落内数学环境}
+
+我们比较了对照组($n=3$)和实验组($n=3$)的菌落数。
+
+\subsection{数学表达式}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+$$
+    \overbrace{1+2+\cdots+100}
+$$
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{equation}
+    \frac{k}{k-1} = 0.5
+\end{equation}
+
+    
+\subsection{大型数学表达式}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+$$
+    \begin{aligned}
+        \nabla \cdot \mathbf{E} &= \frac {\rho} {\varepsilon_0} \\
+        \nabla \cdot \mathbf{B} &= 0 \\
+        \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}} {\partial t} \\
+        \nabla \times \mathbf{B} &= \mu_0\mathbf{J} + \mu_0\varepsilon_0\frac{\partial \mathbf{E}} {\partial t}
+    \end{aligned}
+$$
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{equation}
+    \begin{cases}
+        3x + 5y + z &= 1 \\
+        7x - 2y + 4z &= 2 \\
+        -6x + 3y + 2z &= 3
+    \end{cases}
+\end{equation}
+
+
+\subsection{定理}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\newtheorem{theory}{Theory}
+
+\begin{theory}
+    这是一条定理。
+\end{theory}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\section{代码}
+
+\subsection{算法与伪代码}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{algorithm}
+    \DontPrintSemicolon
+    \KwData{$G=(X,U)$ such that $G^{tc}$ is an order.}
+    \KwResult{$G'=(X,V)$ with $V\subseteq U$ such that $G'^{tc}$ is an
+    interval order.}
+    \Begin{
+    $V \longleftarrow U$\;
+    $S \longleftarrow \emptyset$\;
+    \For{$x\in X$}{
+    $NbSuccInS(x) \longleftarrow 0$\;
+    $NbPredInMin(x) \longleftarrow 0$\;
+    $NbPredNotInMin(x) \longleftarrow |ImPred(x)|$\;
+    }
+    \For{$x \in X$}{
+    \If{$NbPredInMin(x) = 0$ {\bf and} $NbPredNotInMin(x) = 0$}{
+    $AppendToMin(x)$}
+    }
+    \nl\While{$S \neq \emptyset$}{\label{InRes1}
+    \nlset{REM} remove $x$ from the list of $T$ of maximal index\;\label{InResR}
+    \lnl{InRes2}\While{$|S \cap ImSucc(x)| \neq |S|$}{
+    \For{$ y \in S-ImSucc(x)$}{
+    \{ remove from $V$ all the arcs $zy$ : \}\;
+    \For{$z \in ImPred(y) \cap Min$}{
+    remove the arc $zy$ from $V$\;
+    $NbSuccInS(z) \longleftarrow NbSuccInS(z) - 1$\;
+    move $z$ in $T$ to the list preceding its present list\;
+    \{i.e. If $z \in T[k]$, move $z$ from $T[k]$ to
+    $T[k-1]$\}\;
+    }
+    $NbPredInMin(y) \longleftarrow 0$\;
+    $NbPredNotInMin(y) \longleftarrow 0$\;
+    $S \longleftarrow S - \{y\}$\;
+    $AppendToMin(y)$\;
+    }
+    }
+    $RemoveFromMin(x)$\;
+    }
+    }
+    \caption{IntervalRestriction\label{IR}}
+\end{algorithm}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\subsection{Python代码}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+
+\begin{lstlisting}[style=Python]
+    class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print("Hello, my name is " + self.name + " and I am " + str(self.age) + " years old.")
+
+class Student(Person):
+    def __init__(self, name, age, grade):
+        super().__init__(name, age)
+        self.grade = grade
+
+    def study(self):
+        print(self.name + " is studying.")
+
+alice = Student('Alice', 20, 'Sophomore')
+alice.greet()
+alice.study()
+
+\end{lstlisting}
+
+\subsection{R代码}
+
+
+当提到文档排版与编辑，LaTeX无疑是一个强大而灵活的工具。它以其卓越的数学公式排版和高质量的文档输出而闻名。LaTeX的一个显著优势在于它对复杂的排版需求提供了完美的支持，使得用户能够轻松创建专业、美观的文档。
+
+\begin{lstlisting}[style=R]
+    # Define a function to calculate the mean
+    calculate_mean <- function(x) {
+      sum_x <- sum(x)
+      n <- length(x)
+      mean_x <- sum_x / n
+      return(mean_x)
+    }
+    
+    # Define a function to calculate the variance
+    calculate_variance <- function(x) {
+      mean_x <- calculate_mean(x)
+      squared_diffs <- (x - mean_x)^2
+      sum_squared_diffs <- sum(squared_diffs)
+      n <- length(x)
+      variance_x <- sum_squared_diffs / (n - 1)
+      return(variance_x)
+    }
+    
+    # Use the functions
+    x <- c(1, 2, 3, 4, 5)
+    mean_x <- calculate_mean(x)
+    variance_x <- calculate_variance(x)
+    
+    print(paste("Mean of x:", mean_x))
+    print(paste("Variance of x:", variance_x))
+\end{lstlisting}
+
+
+\newpage
+
+\bibliographystyle{unsrt}
+
+\bibliography{ref.bib}
+
+\end{document}

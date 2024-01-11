@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}TEXT}{1}{section.1}%
+\contentsline {section}{\numberline {2}FIGURES}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Single Figure}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Subfigures}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Complex figure}{2}{subsection.2.3}%
+\contentsline {section}{\numberline {3}TABLES}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Small Table}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Large Rotated Table}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}FORMULAS}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Inline Mathmetical Expression}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Formula Environment}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Large Formula}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Theory}{7}{subsection.4.4}%
+\contentsline {section}{\numberline {5}CODES}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Algorithm}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Python Code}{8}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}R Code}{9}{subsection.5.3}%
